@@ -1,4 +1,4 @@
-# Git::Trim
+# git trim
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/git/trim`. To experiment with that code, run `bin/console` for an interactive prompt.
 
@@ -22,13 +22,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You can call `git trim` and it will remove any branch that isn't currently merged into the current branch that isn't also in the `.git-protected-branches` file. It will not remove the master branch.
 
-## Development
+The `.git-protected-branches` file can reside in the current directory or any parent directory. Branch names are each listed on a line in the file. For example:
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```
+master
+staging
+production
+```
 
 ## Contributing
 
