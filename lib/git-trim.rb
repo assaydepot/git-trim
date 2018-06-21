@@ -7,6 +7,7 @@ class GitTrim
     if File.exists?(".git-protected-branches")
       protected_branches = File.read(".git-protected-branches").split("\n")
     end
+    protected_branches ||= []
     protected_branches << "master"
 
     branches = %x{git branch --merged master}.split("\n").collect {|b| b.gsub('*', '').strip}
