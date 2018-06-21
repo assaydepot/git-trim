@@ -1,7 +1,7 @@
 require "git-trim/version"
 
 class GitTrim
-  def run
+  def run(argv=nil)
     %x{git fetch -ap}
 
     if File.exists?(".git-protected-branches")
