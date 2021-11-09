@@ -8,9 +8,9 @@ class GitTrim
       protected_branches = File.read(".git-protected-branches").split("\n")
     end
     protected_branches ||= []
-    protected_branches << "master"
+    protected_branches << "main"
 
-    branches = %x{git branch --merged master}.split("\n").collect {|b| b.gsub('*', '').strip}
+    branches = %x{git branch --merged main}.split("\n").collect {|b| b.gsub('*', '').strip}
     branches -= protected_branches
 
     branches.each do |branch|

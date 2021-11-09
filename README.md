@@ -22,12 +22,12 @@ Or install it yourself as:
 
 ## Usage
 
-You can call `git trim` and it will remove any branch that isn't currently merged into the current branch that isn't also in the `.git-protected-branches` file. It will not remove the master branch.
+You can call `git trim` and it will remove any branch that isn't currently merged into the current branch that isn't also in the `.git-protected-branches` file. It will not remove the main branch.
 
 The `.git-protected-branches` file can reside in the current directory or any parent directory. Branch names are each listed on a line in the file. For example:
 
 ```
-master
+main
 staging
 production
 ```
@@ -42,4 +42,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Git::Trim project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/git-trim/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Git::Trim project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/git-trim/blob/main/CODE_OF_CONDUCT.md).
