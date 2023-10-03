@@ -4,7 +4,7 @@ class GitTrim
   def run(argv=nil)
     %x{git fetch -ap}
 
-    if File.exists?(".git-protected-branches")
+    if File.exist?(".git-protected-branches")
       protected_branches = File.read(".git-protected-branches").split("\n")
     end
     protected_branches ||= []
@@ -20,7 +20,7 @@ class GitTrim
 
   def find_file(filename, directory=Dir.pwd)
     local_filename = File.expand_path(filename, directory)
-    if File.exists?(local_filename)
+    if File.exist?(local_filename)
       return local_filename
     elsif directory == "/"
       return nil
